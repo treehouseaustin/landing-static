@@ -26,11 +26,12 @@ PATHS:
   sass:
     - "node_modules/foundation-sites/scss"
     - "node_modules/motion-ui/src"
+    - "node_modules/@treehouse/ui/src"
   # Paths to JavaScript libraries, which are compined into one file
   javascript:
+    - "node_modules/@treehouse/ui/dist/treehouse.ui.col.js"
     # Libraries requried by Foundation
     - "node_modules/jquery/dist/jquery.js"
-    - "node_modules/what-input/what-input.js"
     # Core Foundation files
     - "node_modules/foundation-sites/js/foundation.core.js"
     - "node_modules/foundation-sites/js/foundation.util.*.js"
@@ -42,7 +43,7 @@ PATHS:
     # - "node_modules/foundation-sites/js/foundation.drilldown.js"
     # - "node_modules/foundation-sites/js/foundation.dropdown.js"
     # - "node_modules/foundation-sites/js/foundation.dropdownMenu.js"
-    # - "node_modules/foundation-sites/js/foundation.equalizer.js"
+    - "node_modules/foundation-sites/js/foundation.equalizer.js"
     # - "node_modules/foundation-sites/js/foundation.interchange.js"
     # - "node_modules/foundation-sites/js/foundation.magellan.js"
     # - "node_modules/foundation-sites/js/foundation.offcanvas.js"
@@ -51,7 +52,7 @@ PATHS:
     # - "node_modules/foundation-sites/js/foundation.responsiveToggle.js"
     # - "node_modules/foundation-sites/js/foundation.reveal.js"
     # - "node_modules/foundation-sites/js/foundation.slider.js"
-    # - "node_modules/foundation-sites/js/foundation.sticky.js"
+    - "node_modules/foundation-sites/js/foundation.sticky.js"
     # - "node_modules/foundation-sites/js/foundation.tabs.js"
     # - "node_modules/foundation-sites/js/foundation.toggler.js"
     # - "node_modules/foundation-sites/js/foundation.tooltip.js"
