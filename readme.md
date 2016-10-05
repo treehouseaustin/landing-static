@@ -1,4 +1,4 @@
-# Static Landing Page Starter
+# Static Landing Page Starter [![Build Status](https://travis-ci.com/treehouseaustin/landing.svg?token=XLiSh4zTSbnj7fMscxCm&branch=master)](https://travis-ci.com/treehouseaustin/landing)
 
 This repository serves as a starting point for all static marketing pages and
 micro-sites that TreeHouse hosts. It includes an asset compilation pipeline as
