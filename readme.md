@@ -1,65 +1,46 @@
-# ZURB Template
+# Static Landing Page Starter
 
-[![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
+This repository serves as a starting point for all static marketing pages and
+micro-sites that TreeHouse hosts. It includes an asset compilation pipeline as
+well as the full component library to ensure the final visuals are on-brand.
 
-**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
+Pages designed using this starter project are directly compatible with the
+TreeHouse build system and will be uploaded to both the live and dev servers
+once the build passes in TravisCI.
 
-This is the official ZURB Template for use with [Foundation for Sites](http://foundation.zurb.com/sites). We use this template at ZURB to deliver static code to our clients. It has a Gulp-powered build system with these features:
+It is important to review the component library before designing any custom
+user interface elements. You can view the source for the library
+[here](https://github.com/treehouseaustin/treehouse-ui) or view a demo of the
+latest components [here](http://ui.dev.tree.house)
 
-- Handlebars HTML templates with Panini
-- Sass compilation and prefixing
-- JavaScript concatenation
-- Built-in BrowserSync server
-- For production builds:
-  - CSS compression
-  - JavaScript compression
-  - Image compression
+## Getting started
 
-## Installation
+Run `npm install` and then `npm start` to boot a development server at
+http://localhost:8000. Changes to assets and partials will be recompiled through
+Webpack automatically but the browser will need to refreshed manually.
 
-To use this template, your computer needs:
+## Contributing
 
-- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
-- [Git](https://git-scm.com/)
+All files required for the landing page are located in the `/src` folder and
+organized by their type. The [JTS template](https://github.com/Ignigena/jts)
+engine is used to allow pages with re-usable layouts and partials.
 
-This template can be installed with the Foundation CLI, or downloaded and set up manually.
+Webpack is used to compile all front-end Javascript code and includes the Babel
+transpiler allowing ES6 code to be written.
 
-### Using the CLI
+Only files in the `dist` folder will be deployed to S3. The current Webpack
+configuration copies all assets and compiled JS/CSS to the `dist` folder along
+with the rendered JTS template.
 
-Install the Foundation CLI with this command:
+## Publishing
 
-```bash
-npm install foundation-cli --global
-```
+The following must be done in order to publish a landing page:
 
-Use this command to set up a blank Foundation for Sites project with this template:
-
-```bash
-foundation new --framework sites --template zurb
-```
-
-The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
-
-### Manual Setup
-
-To manually set up the template, first download it with Git:
-
-```bash
-git clone https://github.com/zurb/foundation-zurb-template projectname
-```
-
-Then open the folder in your command line, and install the needed dependencies:
-
-```bash
-cd projectname
-npm install
-bower install
-```
-
-Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
-
-```
-http://localhost:8000
-```
-
-To create compressed, production-ready assets, run `npm run build`.
+- A `development` and `master` branch should be created to allow for hosting the
+  production version and a development version for preview purposes.
+- The Travis configuration have the following encrypted environment variables:
+  - `NPM_TOKEN` should contain a private NPM token with access to private NPM
+    modules under the `@treehouse` organization.
+  - `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` IAM user for S3 deployments.
+- An entry must be created in the marketing site repo to proxy requests based on
+  the short URL which is required for this micro-site.

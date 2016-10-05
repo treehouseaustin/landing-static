@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+@import 'core/style/importer',
+        'motion-ui';
+
+@include foundation-media-object;
+@include foundation-orbit;
+@include foundation-sticky;
+@include foundation-tabs;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@import 'animations',
+        'typography',
+        'common',
+        'theme';
