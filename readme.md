@@ -17,7 +17,7 @@ latest components [here](http://ui.dev.tree.house)
 
 Run `npm install` and then `npm start` to boot a development server at
 http://localhost:8000. Changes to assets and partials will be recompiled through
-Webpack automatically but the browser will need to refreshed manually.
+Webpack and the browser will be refreshed automatically.
 
 ## Contributing
 

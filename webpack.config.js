@@ -49,6 +49,9 @@ module.exports = {
     ]
   },
   plugins,
+  devServer: {
+    inline: true
+  },
   resolve: {
     alias: {
       'animate.css': path.resolve(__dirname, './node_modules/animate.css/source')
